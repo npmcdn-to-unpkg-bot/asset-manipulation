@@ -1,0 +1,1 @@
+module.exports = require("npm:ng2-bootstrap@1.0.15/ng2-bootstrap.js");

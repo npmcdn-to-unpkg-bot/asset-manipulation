@@ -1,0 +1,124 @@
+<div class=row-fluid>
+  <div class="span12" style="text-align:center;">
+      <img id="image1" src="/files/default/sites/wf2/files/workspaces/workspace-2/test_jpeg_image3.jpeg"/>
+  </div>
+</div>
+<div class="row">
+    <div class="span12">
+        <br/>
+        <div class="span12">
+          <div class="row">
+            <div class="span2">
+                <input #contrast type="radio" value="contrast" name="contrast" [(ngModel)]="selectedProperty" (click)="selectedProperty=contrast.value"> &nbsp;Contrast
+            </div>
+            <div class="span2">
+                <input #saturation type="radio" value="saturation" name="saturation" [(ngModel)]="selectedProperty" (click)="selectedProperty=saturation.value"> &nbsp;Saturation
+            </div>
+            <div class="span2">
+                <input #brightness type="radio" value="brightness" name="brightness" [(ngModel)]="selectedProperty" (click)="selectedProperty=brightness.value"> &nbsp;Brightness
+            </div>
+            <div class="span2">
+                <input #exposure type="radio" value="exposure" name="exposure" [(ngModel)]="selectedProperty" (click)="selectedProperty=exposure.value"> &nbsp;Exposure
+            </div>
+            <div class="span2">
+                <input #sepia type="radio" value="sepia" name="sepia" [(ngModel)]="selectedProperty" (click)="selectedProperty=sepia.value"> &nbsp;Sepia
+            </div>
+            <div class="span2">
+                <input #noise type="radio" value="noise" name="noise" [(ngModel)]="selectedProperty" (click)="selectedProperty=noise.value"> &nbsp;Noise
+            </div>
+          </div>
+        </div>
+        <div class="span12">
+          <div class="row">
+            <div class="span2">
+                <input #sharpen type="radio" value="sharpen" name="sharpen" [(ngModel)]="selectedProperty" (click)="selectedProperty=sharpen.value"> &nbsp;Sharpen
+            </div>
+            <div class="span2">
+                <input #vibrance type="radio" value="vibrance" name="vibrance" [(ngModel)]="selectedProperty" (click)="selectedProperty=vibrance.value"> &nbsp;Vibrance
+            </div>
+            <div class="span2">
+                <input #gamma type="radio" value="gamma" name="gamma" [(ngModel)]="selectedProperty" (click)="selectedProperty=gamma.value"> &nbsp;Gamma
+            </div>
+          </div>
+       </div>
+        <br/>
+        <br/>
+        <div class="span12" style="text-align:center;">
+            <button class="btn" (click)="updateProperty('+')">
+                <i class="fa fa-plus"></i>
+            </button>
+            <button class="btn" (click)="updateProperty('-')">
+                <i class="fa fa-minus"></i>
+            </button>
+        </div>
+        <div class="span12">
+          <div class="span4">
+            <br/>
+            <label>Crop Image</label>
+            <br/>
+            <div class="span12">
+                <label>X <input #cropX name="cropX" type="number" [(ngModel)]="cropSelection.x" (click)="cropSelection.x=cropX.value"></label>
+            </div>
+            <div class="span12">
+                <label>Y <input #cropY name="cropY" type="number" [(ngModel)]="cropSelection.y" (click)="cropSelection.y=cropY.value"></label>
+            </div>
+            <br/>
+            <br/>
+            <div class="span12">
+              <button type="button" class="btn btn-success pull-right"
+                      (click)="cropImage()">
+                Crop
+              </button>
+            </div>
+          </div>
+          <div class="span4">
+            <br/>
+            <label>Resize Image</label>
+            <br/>
+            <div class="span12">
+                <label>X <input #resizeX name="resizeX" type="number" [(ngModel)]="resizeSelection.x" (click)="resizeSelection.x=resizeX.value"></label>
+            </div>
+            <div class="span12">
+                <label>Y <input #resizeY name="resizeY" type="number" [(ngModel)]="resizeSelection.y" (click)="resizeSelection.y=resizeY.value"></label>
+            </div>
+            <br/>
+            <br/>
+            <div class="span12">
+              <button type="button" class="btn btn-success pull-right"
+                      (click)="resizeImage()">
+                Resize
+              </button>
+            </div>
+          </div>
+          <div class="span4">
+              <label>Channels</label>
+              <br/>
+              <div class="span12">
+                <label>R <input #channelR name="channelR" type="number" min="0" max="255" [(ngModel)]="channelSelection.r" (click)="channelSelection.r=channelR.value"></label>
+              </div>
+              <div class="span12">
+                <label>G <input #channelG name="channelG" type="number" min="0" max="255" [(ngModel)]="channelSelection.g" (click)="channelSelection.g=channelG.value"></label>
+              </div>
+              <div class="span12">
+                <label>B <input #channelB name="channelB" type="number" min="0" max="255" [(ngModel)]="channelSelection.b" (click)="channelSelection.b=channelB.value"></label>
+              </div>
+              <br/>
+              <br/>
+              <div class="span12">
+                <button type="button" class="btn btn-success pull-right"
+                        (click)="applyChannelSettings()">
+                        Apply Channel
+                </button>
+              </div>
+          </div>
+        </div>
+        <div class="span12" style="text-align:center;">
+          <button type="button" class="btn btn-danger pull-right"
+                  (click)="imageSettings.resetImage()">
+            Reset
+          </button>
+        </div>
+        <div class="span12" style="text-align:center;">
+        </div>
+    </div>
+</div>

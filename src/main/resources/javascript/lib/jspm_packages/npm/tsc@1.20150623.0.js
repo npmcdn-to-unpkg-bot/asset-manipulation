@@ -1,0 +1,1 @@
+module.exports = require("npm:tsc@1.20150623.0/bin/typescript.js");

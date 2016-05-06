@@ -1,0 +1,1 @@
+module.exports = require("npm:ng2-slider-component@1.0.1/ng2-slider.component.ts");

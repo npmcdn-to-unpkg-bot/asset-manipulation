@@ -1,0 +1,1 @@
+module.exports = require("npm:ng2-slideable-directive@1.0.5/slideable.directive.ts");

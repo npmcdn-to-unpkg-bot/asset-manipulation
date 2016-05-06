@@ -1,0 +1,28 @@
+{
+  "name": "asset-manipulation",
+  "version": "1.0.0",
+  "authors": [
+    "stefan <ssavu@jahia.com>"
+  ],
+  "description": "Jahia Asset Manipulation",
+  "main": "",
+  "moduleType": [],
+  "keywords": [
+    "asset",
+    "manipulation",
+    "images",
+    "video",
+    "audio"
+  ],
+  "license": "SEE LICENSE IN LICENSE.txt",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "caman" : "~4.1.*"
+  }
+
+}
